@@ -26,23 +26,23 @@ gulp.task('pug', function () {
 		.pipe(gulp.dest('./#src/'))
 });
 
-// gulp.task('pug', function () {
-// 	return gulp.src('./#src/pug/pages/**/*.pug')
-// 		.pipe(plumber({
-// 			errorHandler: notify.onError(function (err) {
-// 				return {
-// 					title: 'Pug',
-// 					sound: false,
-// 					message: err.message
-// 				}
-// 			})
-// 		}))
-// 		.pipe(pug({
-// 			plugins: [pugbem],
-// 			pretty: true
-// 		}))
-// 		.pipe(gulp.dest('./#src/'));
-// });
+gulp.task('pug', function () {
+	return gulp.src('./#src/pug/pages/**/*.pug')
+		.pipe(plumber({
+			errorHandler: notify.onError(function (err) {
+				return {
+					title: 'Pug',
+					sound: false,
+					message: err.message
+				}
+			})
+		}))
+		.pipe(pug({
+			plugins: [pugbem],
+			pretty: true
+		}))
+		.pipe(gulp.dest('./#src/'));
+});
 
 // Таск для компиляции SCSS в CSS
 gulp.task('scss', function (callback) {
