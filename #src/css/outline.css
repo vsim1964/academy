@@ -166,8 +166,8 @@ fieldset::before {
 }
 
 *::before,
-* > *::before,
-* > * > *::before {
+*>*::before,
+*>*>*::before {
   position: absolute;
   top: 8px;
   left: 10px;
