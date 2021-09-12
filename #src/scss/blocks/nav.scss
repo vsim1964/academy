@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+/* navigation-------------------------- */
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 28px;
+}
+
+.nav__menu-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.nav__user-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.nav__link {
+	font: 500 14px/44px "Manrope", Arial, sans-serif;
+	color: $nav-link;
+	padding-right: 30px;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		color: $nav-link-current;
+	}
+
+	&--current {
+		color: $nav-link-current;
+	}
+}

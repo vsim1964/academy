@@ -1,66 +1,22 @@
+@import "variables.scss";
+
 /* common -------------------------- */
 html {
 	height: 100%;
-	background: #ffffff;
+	background: $page;
 }
 
 body {
 	height: 100%;
-	font: 17px/26px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #6a6a6a;
-	-webkit-font-smoothing: antialiased;
-	-webkit-backface-visibility: hidden;
+	font: 400 16px/24px "Manrope", Arial, sans-serif;
+	color: $text-font;
+
 }
 
-.main {
-	min-height: 100%;
-	overflow: hidden;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.wrap {
+.container {
 	margin: 0 auto;
-	max-width: 940px;
-	padding: 0 30px;
-}
-
-a {
-	color: #26a6d1;
-	cursor: pointer;
-	-moz-transition: color 0.15s linear;
-	-o-transition: color 0.15s linear;
-	-webkit-transition: color 0.15s linear;
-	transition: color 0.15s linear;
-}
-
-a:hover {
-	color: #1e85a7;
-}
-
-.error {
-	color: #FF0000 !important;
-	border-color: #FF0000 !important;
-}
-
-.success {
-	color: #00CC00 !important;
-	border-color: #00CC00 !important;
-}
-
-.disabled {
-	color: #999999 !important;
-	border-color: #999999 !important;
-	cursor: default !important;
-}
-
-.social li a,
-.ico-help,
-.ico-like,
-.ico-present,
-.istore a:after {
-	background: url(../images/sprite.png) no-repeat 0 0;
+	max-width: 1220px;
+	position: relative;
 }
 
 h1,
@@ -80,7 +36,37 @@ h3 {
 	margin: 0 0 22px;
 }
 
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
